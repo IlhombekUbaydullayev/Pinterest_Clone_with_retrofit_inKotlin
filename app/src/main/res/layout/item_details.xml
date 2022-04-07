@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:paddingHorizontal="2dp"
+    android:layout_height="wrap_content">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:background="@drawable/shape_rounded_white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/iv_photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_launcher_background"
+                        app:shapeAppearanceOverlay="@style/topCornerRounded" />
+
+                    <ImageView
+                        android:id="@+id/iv_more_settings"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="end|top"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/ic_more"
+                        app:tint="@color/white" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/iv_profile"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_launcher_background"
+                            app:shapeAppearanceOverlay="@style/circle" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="10dp">
+
+                            <TextView
+                                android:id="@+id/tv_fullName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Azizjon Sheronov"
+                                android:textColor="@color/black_light"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_followers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2k Followers"
+                                android:textColor="@color/black_light"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_follow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edt_shape_rounded"
+                            android:backgroundTint="@color/holo_white"
+                            android:paddingVertical="10dp"
+                            android:paddingHorizontal="15dp"
+                            android:text="Follow"
+                            android:textColor="@color/black_light"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_description"
+                    android:text="@string/app_name"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="15dp"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <FrameLayout
+                    android:paddingVertical="15dp"
+                    android:paddingHorizontal="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_baseline_chat_bubble_outline_24"
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"/>
+
+                    <ImageView
+                        android:layout_gravity="end|center_vertical"
+                        android:src="@drawable/ic_share_"
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"/>
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_visit_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_rounded"
+                            android:backgroundTint="@color/holo_white"
+                            android:padding="20dp"
+                            android:text="View"
+                            android:textColor="@color/black_light"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_save"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_rounded"
+                            android:backgroundTint="@color/red"
+                            android:padding="20dp"
+                            android:text="Save"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="3dp"
+                android:padding="15dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_rounded_white">
+
+                <TextView
+                    android:text="Comments"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_message"
+                    android:text="Love this Pin? Let Humberto Texis know!"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/iv_profile_comment"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_launcher_background"
+                        app:shapeAppearanceOverlay="@style/circle" />
+
+                    <TextView
+                        android:text="Add a comment"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="16sp"
+                        android:layout_marginStart="25dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/shape_rounded_white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_related"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:text="More like this"
+                    android:textColor="@color/black_light"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/rv_details_like_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:src="@drawable/ic_baseline_arrow_back24"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="end|start"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="15dp"
+        app:tint="@color/white"/>
+
+</FrameLayout>

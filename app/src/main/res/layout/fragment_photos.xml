@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:paddingTop="5dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="5dp"
+            android:background="@drawable/shape_rounded_white"
+            android:backgroundTint="@color/black"
+            android:text="All"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_marginStart="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:id="@+id/rv_photos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fm_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80FFFFFF"
+        android:visibility="gone">
+
+        <!--        <com.airbnb.lottie.LottieAnimationView-->
+        <!--            android:layout_gravity="center"-->
+        <!--            app:lottie_rawRes="@raw/loading"-->
+        <!--            android:id="@+id/lottie_loading"-->
+        <!--            android:layout_width="70dp"-->
+        <!--            android:layout_height="70dp"-->
+        <!--            app:lottie_url="REPLACE_JSON_URL"-->
+        <!--            app:lottie_autoPlay="true"-->
+        <!--            app:lottie_loop="true"/>-->
+        <!--        -->
+        <ProgressBar
+            android:id="@+id/progress_loading"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:indeterminate="true" />
+    </FrameLayout>
+
+</FrameLayout>
